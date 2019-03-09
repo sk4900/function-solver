@@ -44,6 +44,6 @@ public class Variable extends Function {
      * @return the value of the integral
      */
     public double integral(double lower, double upper, double round) {
-        return 0;
+        return (upper * upper)/2 - (lower * lower)/2;
     }
 }

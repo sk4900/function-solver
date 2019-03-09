@@ -3,6 +3,10 @@ package functions;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Sum class
+ * @author Sungmin Kim
+ */
 public class Sum extends Function {
 
     /**
@@ -19,6 +23,9 @@ public class Sum extends Function {
         double newConstant = 0.0;
         for (int i = 0; i < terms.length; i++){
                 if (terms[i].isConstant()) {
+                    if( terms[i].evaluate(0) == 0.0){
+                        continue;
+                    }
                     newConstant += terms[i].evaluate(0);
                 } else {
                     this.terms.add(terms[i]);
@@ -49,10 +56,10 @@ public class Sum extends Function {
     @Override
     public String toString() {
         String tStr = "";
-        for( Function term : this.terms){
-            tStr +=  term.toString() + " + ";
+        for (Function term : this.terms){
+            tStr += term.toString() + " + ";
         }
-        tStr = tStr.substring(0,tStr.length()-3);
+        tStr = tStr.substring(0, tStr.length()-3);
         return "( " + tStr + " )";
     }
 

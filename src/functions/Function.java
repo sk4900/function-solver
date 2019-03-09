@@ -5,9 +5,6 @@ package functions;
  * @author Sungmin Kim
  */
 public abstract class Function {
-
-    public static final int MAX_TERMS = 10;
-
     /**
      * Finds the value of a function given the value of x.
      * @param x value of x

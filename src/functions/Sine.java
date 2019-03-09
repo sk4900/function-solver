@@ -54,6 +54,13 @@ public class Sine extends Function{
      */
     @Override
     public double integral(double lower, double upper, double round) {
-        return 0;
+        double length = (upper - lower) / round;
+        double height = 0.0;
+        double area = 0.0;
+        for (int i = 0; i < round ; i++){
+            area += (((this.evaluate(height) + this.evaluate(height += length))/ 2) * length);
+        }
+        return area;
     }
+
 }

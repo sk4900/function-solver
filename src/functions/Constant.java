@@ -46,6 +46,7 @@ public class Constant extends Function {
      * @return the value of the integral
      */
     public double integral(double lower, double upper, double round) {
-
+        double conInt = (upper * this.value) - (lower * this.value);
+        return conInt;
     }
 }

@@ -17,9 +17,9 @@ public class FnTest1 {
         int argLen = args.length;
         Variable var = Variable.X;
         Function f = new
-            Product( var, new Constant( 9 ), var, new Constant( 11 ) );
+            Product( var, new Constant( 9 ), var, new Constant( 11 ));
         System.out.println( "functions.Function " + f );
-        System.out.println( "Value at 0: " + f.evaluate( 0.0 ) );
+        System.out.println( "Value at 0: " + f.evaluate( 0 ) );
         for ( int i = 0; i < argLen; ++i ) {
             double value = Double.parseDouble( args[ i ] );
             System.out.println( "Value at " + value + ": " +
@@ -27,7 +27,7 @@ public class FnTest1 {
         }
         System.out.println( "Derivative: " + f.derivative() );
         System.out.println( "Integral from 0 to 10: " +
-                                    f.integral( 0.0, 10.0, 1000000 ) );
+                                    f.integral( 0.0, 10.0, 100 ) );
     }
 
 }
