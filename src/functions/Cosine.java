@@ -1,10 +1,19 @@
 package functions;
 
+/**
+ * Cosine function
+ * @author Sungmin Kim
+ */
 public class Cosine extends Function {
 
 
+    /** term inside cosine function*/
     private Function term;
 
+    /**
+     * constructor for a cosine function
+     * @param term term to be inside cosine
+     */
     public Cosine (Function term){
         this.term = term;
     }
